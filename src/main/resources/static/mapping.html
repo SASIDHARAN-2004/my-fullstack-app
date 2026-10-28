@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Student Mapping</title>
+    <link rel="stylesheet" href="mapping.css">
+</head>
+
+<body>
+    <header><a href="home.html">← Home</a><button id="logout">Logout</button></header>
+    <main>
+        <h1>Student–Requirement Mapping</h1>
+        <section>
+            <h2>Map Students</h2>
+            <form id="mapForm"><label>Requirement</label><button type="button" id="requirementPicker"
+                    class="picker">Click to select a requirement</button><input id="requirementId" type="hidden">
+                <div id="requirementTable" class="table-panel hidden">
+                    <div class="search-row requirement-filter-row"><input id="requirementFilterId" placeholder="Search by Requirement ID"><input id="requirementFilterCompany" placeholder="Search by Company Name"><input id="requirementFilterDealCode" placeholder="Search by Branch Deal Code"><button type="button" id="resetRequirementFilters" class="reset-table">Reset</button></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>ID</th>
+                                <th>Branch Deal Code</th>
+                                <th>Company Name</th>
+                                <th>Job Title</th>
+                                <th>Job Location</th>
+                                <th>Interview Date</th>
+                                <th>Vacancies</th>
+                                <th>Interview Mode</th>
+                            </tr>
+                        </thead>
+                        <tbody id="requirementRows"></tbody>
+                    </table>
+                </div>
+                <div class="student-heading"><label>Students</label><strong id="selectedCount">0 students
+                        selected</strong></div><button type="button" id="studentPicker" class="picker">Click to select
+                    students</button>
+                <div id="studentTable" class="table-panel hidden">
+                    <div class="search-row student-filter-row"><input id="searchId" placeholder="Search by ID"><input id="searchEmail"
+                            placeholder="Search by email"><input id="searchContact"
+                            placeholder="Search by contact number"><button type="button" id="resetStudentFilters" class="reset-table">Reset</button></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Contact Number</th>
+                                <th>Year of Passing</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentRows"></tbody>
+                    </table>
+                </div><button>Map Selected Students</button>
+            </form>
+            <p id="message"></p>
+        </section>
+        <section class="action-card">
+            <h2>Remove Student from Requirement</h2><p>Select one requirement and one student, then remove that student only from that requirement.</p>
+            <div class="remove-grid"><label>Requirement ID<input id="removeRequirementId" readonly placeholder="Click to select a requirement"></label><label>Student ID<input id="removeStudentId" readonly placeholder="Click to select a student"></label></div>
+            <div id="removeRequirementTable" class="table-panel hidden"><div class="search-row requirement-filter-row"><input id="removeReqFilterId" placeholder="Search by Requirement ID"><input id="removeReqFilterCompany" placeholder="Search by Company Name"><input id="removeReqFilterDeal" placeholder="Search by Branch Deal Code"><button type="button" id="resetRemoveRequirementFilters" class="reset-table">Reset</button></div><table><thead><tr><th>Select</th><th>Requirement ID</th><th>Branch Deal Code</th><th>Company Name</th><th>Job Title</th><th>Job Location</th><th>Interview Date</th><th>Vacancies</th><th>Interview Mode</th></tr></thead><tbody id="removeRequirementRows"></tbody></table></div>
+            <div id="removeStudentTable" class="table-panel hidden"><div class="search-row student-filter-row"><input id="removeStudentFilterId" placeholder="Search by Student ID"><input id="removeStudentFilterEmail" placeholder="Search by Email"><input id="removeStudentFilterContact" placeholder="Search by Contact Number"><button type="button" id="resetRemoveStudentFilters" class="reset-table">Reset</button></div><table><thead><tr><th>Select</th><th>Student ID</th><th>Name</th><th>Email ID</th><th>Contact No</th><th>Year of Passing</th></tr></thead><tbody id="removeStudentRows"></tbody></table></div>
+            <button type="button" id="removeMappedStudent" class="danger-button remove-action">Remove Student</button><p id="removeMessage"></p>
+        </section>
+        <section class="action-card">
+            <h2>View Mapped Students</h2><p>Select one requirement from the table, then click View Students.</p>
+            <div class="view-filter-row"><input id="viewRequirementId" placeholder="Search by Requirement ID"><input id="viewCompanyName" placeholder="Search by Company Name"><input id="viewDealCode" placeholder="Search by Branch Deal Code"><button type="button" id="resetViewFilters" class="reset-table">Reset</button></div>
+            <div class="table-panel view-requirement-table"><table><thead><tr><th>Select</th><th>Requirement ID</th><th>Branch Deal Code</th><th>Company Name</th><th>Job Title</th><th>Job Location</th><th>Interview Date</th><th>Vacancies</th><th>Interview Mode</th></tr></thead><tbody id="viewRequirementRows"></tbody></table></div>
+            <p id="viewMessage"></p><div id="mappedStudentsTable"></div>
+        </section>
+    </main>
+    <script src="mapping.js"></script>
+</body>
+
+</html>

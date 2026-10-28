@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Students</title>
+    <link rel="stylesheet" href="students.css">
+</head>
+
+<body>
+    <header><a href="home.html">← Home</a><button id="logout">Logout</button></header>
+    <main>
+        <h1>Students</h1>
+        <section>
+            <h2>Add Student</h2>
+            <form id="studentForm" class="grid"><label>Name<input id="name" required></label><label>Contact Number<input
+                        id="contactNumber" type="tel" required></label><label>Email<input id="email" type="email"
+                        required></label><label>Degree<input id="degree" required></label><label>Masters<input
+                        id="masters" placeholder="NA if not applicable" required></label><label>10th Percentage<input
+                        id="tenthPercent" type="number" step=".01" required></label><label>12th Percentage<input
+                        id="twelfthPercent" type="number" step=".01" required></label><label>Degree Percentage<input
+                        id="degreePercent" type="number" step=".01" required></label><label>Masters Percentage<input
+                        id="mastersPercent" type="number" step=".01" required></label><label>Year of Passing<input
+                        id="yop" required></label>
+                <div class="form-actions"><button type="submit">Save Student</button><button type="reset"
+                        class="reset">Reset Fields</button></div>
+            </form>
+            <p id="message"></p>
+        </section>
+        <section>
+            <h2>Find or Delete Student</h2>
+            <div class="grid"><label>Student ID<input id="filterId" type="number"><button data-search="id">Get Student
+                        by ID</button></label><label>Email<input id="filterEmail" type="email"><button
+                        data-search="email">Get Student by Email</button></label><label>Contact Number<input
+                        id="filterContact" type="tel"><button data-search="contact">Get Student by
+                        Contact</button></label><label>Delete Student ID<input id="deleteId" type="number"><button
+                        id="deleteButton" class="danger">Delete Student</button></label></div>
+            <p id="filterMessage"></p>
+        </section>
+        <section>
+            <div class="list-header">
+                <h2>Student List</h2><button id="showAll">Show All Students</button>
+            </div>
+            <div id="list"></div>
+        </section>
+    </main>
+    <script src="students.js"></script>
+</body>
+
+</html>

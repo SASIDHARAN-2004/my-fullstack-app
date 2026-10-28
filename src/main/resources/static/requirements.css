@@ -1,0 +1,197 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #eef2f7;
+    color: #183153
+}
+
+header {
+    padding: 15px 7%;
+    background: #183153;
+    display: flex;
+    justify-content: space-between
+}
+
+header a {
+    color: white;
+    text-decoration: none
+}
+
+main {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 18px
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px #0002
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 13px
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold
+}
+
+input,
+select,
+button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1
+}
+
+button {
+    border: 0;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer
+}
+
+header button {
+    width: auto;
+    background: #dc2626
+}
+
+.danger {
+    background: #dc2626
+}
+
+.reset {
+    background: #64748b
+}
+
+.form-actions {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 12px;
+    margin-top: 8px
+}
+
+.form-actions button {
+    width: auto;
+    min-width: 180px
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px
+}
+
+.list-header h2 {
+    margin: 0
+}
+
+.list-header button {
+    width: auto;
+    margin: 0;
+    padding: 10px 22px
+}
+
+.row {
+    width: auto
+}
+
+#message,
+#filterMessage,
+#mappingMessage {
+    color: #b91c1c
+}
+
+.success {
+    color: #15803d !important
+}
+
+.student {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px
+}
+
+.requirement-card {
+    border: 1px solid #b9d2fa;
+    border-radius: 10px;
+    padding: 0;
+    margin: 18px 0;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 3px 10px #1e3a5f18
+}
+
+.requirement-card h3 {
+    margin: 0;
+    padding: 15px 18px;
+    background: #2563eb;
+    color: white;
+    font-size: 18px
+}
+
+.requirement-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0
+}
+
+.requirement-details p {
+    margin: 0;
+    padding: 11px 14px;
+    border-right: 1px solid #dbeafe;
+    border-bottom: 1px solid #dbeafe;
+    background: #fff;
+    font-size: 14px
+}
+
+.requirement-details p:nth-child(4n+1),
+.requirement-details p:nth-child(4n+2) {
+    background: #f8fbff
+}
+
+.requirement-details b {
+    color: #1e40af
+}
+
+.requirement-card .row {
+    margin: 14px 18px;
+    background: #dc2626
+}
+
+@media(max-width:650px) {
+    .requirement-details {
+        grid-template-columns: 1fr
+    }
+
+    .requirement-details p {
+        border-right: 0
+    }
+
+    .form-actions,
+    .list-header {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .form-actions button,
+    .list-header button {
+        width: 100%
+    }
+
+    .list-header {
+        gap: 10px
+    }
+}

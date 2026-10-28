@@ -1,0 +1,148 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f1f5f9;
+    color: #183153
+}
+
+header {
+    padding: 15px 7%;
+    background: #183153;
+    display: flex;
+    justify-content: space-between
+}
+
+header a {
+    color: #fff;
+    text-decoration: none
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 18px
+}
+
+section {
+    background: #fff;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px #0002
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 13px
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold
+}
+
+input,
+button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1
+}
+
+button {
+    border: 0;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer
+}
+
+header button {
+    width: auto;
+    background: #dc2626
+}
+
+.danger {
+    background: #dc2626
+}
+
+.form-actions {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 12px;
+    margin-top: 8px
+}
+
+.form-actions button {
+    width: auto;
+    min-width: 180px
+}
+
+.reset {
+    background: #64748b
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px
+}
+
+.list-header h2 {
+    margin: 0
+}
+
+.list-header button {
+    width: auto;
+    margin: 0;
+    padding: 10px 22px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 13px
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 8px;
+    text-align: left
+}
+
+th {
+    background: #e2e8f0
+}
+
+#message,
+#filterMessage {
+    color: #b91c1c
+}
+
+.success {
+    color: #15803d !important
+}
+
+@media(max-width:650px) {
+
+    .form-actions,
+    .list-header {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .form-actions button,
+    .list-header button {
+        width: 100%
+    }
+
+    .list-header {
+        gap: 10px
+    }
+}

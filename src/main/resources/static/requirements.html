@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Requirements</title>
+    <link rel="stylesheet" href="requirements.css">
+</head>
+
+<body>
+    <header><a href="home.html">← Home</a><button id="logout">Logout</button></header>
+    <main>
+        <h1>Job Requirements</h1>
+        <section class="card">
+            <h2>Add Requirement</h2>
+            <form id="requirementForm" class="grid"><label>Branch Deal Code<input id="branchDealCode"
+                        required></label><label>Company Name<input id="companyName" required></label><label>Job
+                    Title<input id="jobTitle" required></label><label>Designation<input id="designation"
+                        required></label><label>Job Location<input id="jobLocation" required></label><label>Skills
+                    Required<input id="skillsRequired" required></label><label>Vacant Positions<input
+                        id="noOfVacantPositions" type="number" required></label><label>Candidates Required<input
+                        id="noOfCandidatesRequired" type="number" required></label><label>Interview Date<input
+                        id="interviewDate" type="date" required></label><label>Gender Specification<input
+                        id="genderSpecification" required></label><label>Mode of Interview<input id="modeOfInterview"
+                        required></label><label>Minimum 10th %<input id="tenthPercentMin" type="number" step=".01"
+                        required></label><label>Minimum 12th %<input id="twelfthPercentMin" type="number" step=".01"
+                        required></label><label>Minimum Degree %<input id="degreePercentMin" type="number" step=".01"
+                        required></label><label>Qualification Type<input id="qualificationType" required></label>
+                <div class="form-actions"><button type="submit">Save Requirement</button><button type="reset"
+                        class="reset">Reset Fields</button></div>
+            </form>
+            <p id="message"></p>
+        </section>
+        <section class="card">
+            <h2>Filters and Delete</h2>
+            <div class="grid"><label>Requirement ID<input id="filterId" type="number"><button data-type="id">Find by
+                        ID</button></label><label>Company Name<input id="filterCompany"><button data-type="company">Find
+                        by Company</button></label><label>Branch Deal Code<input id="filterBranch"><button
+                        data-type="branch">Find by Deal Code</button></label><label>Delete Requirement ID<input
+                        id="deleteRequirementId" type="number"><button id="deleteRequirementButton"
+                        class="danger">Delete Requirement</button></label></div>
+            <p id="filterMessage"></p>
+        </section>
+        <section class="card">
+            <div class="list-header">
+                <h2>Requirement List</h2><button id="showAll">Show All Requirements</button>
+            </div>
+            <div id="list"></div>
+        </section>
+    </main>
+    <script src="requirements.js"></script>
+</body>
+
+</html>

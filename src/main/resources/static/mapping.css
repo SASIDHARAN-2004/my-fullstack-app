@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8fafc;
+    color: #183153
+}
+
+header {
+    padding: 15px 7%;
+    background: #183153;
+    display: flex;
+    justify-content: space-between
+}
+
+header a {
+    color: #fff;
+    text-decoration: none
+}
+
+main {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 18px
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin: 18px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001
+}
+
+label,
+select,
+button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px
+}
+
+button {
+    border: 0;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer
+}
+
+header button {
+    width: auto;
+    background: #dc2626
+}
+
+.picker {
+    text-align: left;
+    background: #fff;
+    color: #183153;
+    border: 1px solid #94a3b8
+}
+
+.table-panel {
+    margin-top: 8px;
+    border: 1px solid #93c5fd;
+    border-radius: 6px;
+    max-height: 205px;
+    min-height: 150px;
+    overflow-y: auto
+}
+
+.hidden {
+    display: none
+}
+
+.table-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px
+}
+
+.table-panel th {
+    position: sticky;
+    top: 0;
+    background: #1d4ed8;
+    color: #fff;
+    z-index: 1
+}
+
+.table-panel th,
+.table-panel td {
+    padding: 9px;
+    border: 1px solid #bfdbfe;
+    text-align: left;
+    white-space: nowrap
+}
+
+.table-panel tr:hover {
+    background: #eff6ff
+}
+
+.square-check {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #2563eb;
+    border-radius: 2px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: #fff
+}
+
+.square-check:checked {
+    background: #2563eb;
+    position: relative
+}
+
+.square-check:checked:after {
+    content: "✓";
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 2px;
+    top: -2px
+}
+
+.student-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px
+}
+
+.student-heading label {
+    margin: 0
+}
+
+.student-heading strong {
+    color: #1d4ed8;
+    white-space: nowrap
+}
+
+.search-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 8px;
+    background: #eff6ff
+}
+
+.search-row input {
+    padding: 8px;
+    border: 1px solid #93c5fd;
+    border-radius: 4px
+}
+
+.requirement-filter-row{grid-template-columns:repeat(3,1fr) auto}.reset-table{margin:0;background:#64748b;width:auto;min-width:85px}
+.student-filter-row{grid-template-columns:repeat(3,1fr) auto}
+.action-card p{margin:7px 0}.remove-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end}.danger-button{background:#dc2626}.remove-action{margin-top:14px}.remove-grid input[readonly]{background:#fff;cursor:pointer}.view-filter-row{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:8px;margin:12px 0}.view-filter-row input{padding:9px;border:1px solid #93c5fd;border-radius:4px}.view-filter-row button{margin:0}.view-requirement-table{display:block;max-height:205px}.mapped-table{width:100%;border-collapse:collapse;margin-top:12px}.mapped-table th,.mapped-table td{padding:9px;border:1px solid #bfdbfe;text-align:left}.mapped-table th{background:#1d4ed8;color:#fff}
+
+.box {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px
+}
+
+#message {
+    color: #b91c1c
+}
+
+.success {
+    color: #15803d !important
+}
+
+.requirement-search{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:8px;margin:14px 0}.requirement-search input{padding:9px;border:1px solid #93c5fd;border-radius:4px}.requirement-search button{margin:0}.requirement-card{border:1px solid #bfdbfe;border-left:5px solid #2563eb;border-radius:7px;padding:14px;margin:10px 0;cursor:pointer}.requirement-card:hover,.requirement-card.active{background:#eff6ff;border-left-color:#1d4ed8}.requirement-card h3{margin:0 0 8px}.requirement-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:7px;font-size:14px}.requirement-card-grid p{margin:0}#requirementSearchMessage{color:#b91c1c}
+
+@media(max-width:700px) {
+    .requirement-filter-row { grid-template-columns: 1fr }
+    .student-filter-row { grid-template-columns: 1fr }
+    .view-filter-row,.remove-grid { grid-template-columns: 1fr }
+    .requirement-search { grid-template-columns: 1fr }
+    .search-row {
+        grid-template-columns: 1fr
+    }
+
+    .student-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px
+    }
+}
